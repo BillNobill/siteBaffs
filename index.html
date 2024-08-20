@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baff's Pedidos</title>
+    <link rel="stylesheet" href="css/index.css" media="screen">
+    <link rel="stylesheet" href="css/impressora.css" media="print">
+    <link rel="shortcut icon" href="img/1556281030911.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/imagem_2022-07-08_082656711-removebg-preview.png" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="shortcut icon" href="img/space.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="fixoTopo">
+            <div class="menu">
+                <ul id="logo">
+                    <li>
+                        <a href="https://baffs.com.br" target="_blank"><img id="logoImg" src="img/BaffsLogo.webp"></a>
+                    </li>
+                </ul>
+                <ul id="linkancora">
+                    <li>
+                        <a href="#text">
+                            Fixas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="src/login.html">
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <div id="botaoFazerPedido">
+                <a href="#preencherForm">
+                    <h2 id="fazerPedido">Faça seu pedido aqui!</h2>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main id="text">
+        <h2 class="titulo" id="preencherForm">
+            Formulário
+        </h2>
+        <div id="container">
+            <form action="#" method="post" id="form">
+
+                <div class="containerNomeResponsavel">
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off"
+                            class="input caixaNomeResponsavel">
+                        <label class="user-label">Nome do responsável</label>
+                    </div>
+                </div>
+
+                <div class="containerNomeAluno">
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input caixaNomeAluno">
+                        <label class="user-label">Nome do aluno</label>
+                    </div>
+                </div>
+
+                <div class="containerInformacoes">
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input caixaTurma smallBox">
+                        <label class="user-label">Turma</label>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text " autocomplete="off"
+                            class="input caixaIdade smallBox">
+                        <label class="user-label ">Idade</label>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" disabled autocomplete="off"
+                            class="input caixaDia inputDataAmarelo smallBox">
+                        <label class="user-label" id="data">dd/mm/aa</label>
+                    </div>
+                </div>
+
+                <div class="containerProdutos">
+                    <div class="input-group">
+                        <select id="comprasCantina1" class="inputValor1 smallBox caixaProduto" required=""
+                            onchange="atualizouSelect1()" style="width: 200px;">
+                            <option value="produtoNaoSelecionado1">Produto</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="salgado1">Salgado</option>
+                            <option value="refrigerante1">Refrigerante</option>
+                            <option value="picole1">Picolé</option>
+                            <option value="chiclete1">Chiclete</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <select id="quantidadeCantina1" class="inputValor1 smallBox caixaQuantidade" required="" disabled
+                            onchange="atualizouSelect1()" style="width: 200px; padding-right: 16px;">
+                            <option value="quantidadeNaoSelecionada1">Quantidade</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off"
+                            class="inputValor1 caixaValor smallBox" disabled="">
+                        <label class="user-label " id="valor1">Valor</label>
+                    </div>
+                </div>
+
+                <div class="containerProdutos displayTrue2 displayNone">
+                    <div class="input-group">
+                        <select id="comprasCantina2" class="inputValor2 smallBox caixaProduto" required=""
+                            onchange="atualizouSelect2()" style="width: 200px;">
+                            <option value="produtoNaoSelecionado2">Produto</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="salgado2">Salgado</option>
+                            <option value="refrigerante2">Refrigerante</option>
+                            <option value="picole2">Picolé</option>
+                            <option value="chiclete2">Chiclete</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <select id="quantidadeCantina2" class="inputValor2 smallBox caixaQuantidade" required=""
+                            disabled onchange="atualizouSelect2()" style="width: 200px; padding-right: 16px;">
+                            <option value="quantidadeNaoSelecionada2">Quantidade</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off"
+                            class="inputValor2 caixaValor smallBox" disabled="">
+                        <label class="user-label " id="valor2">Valor</label>
+                    </div>
+                </div>
+
+                <div class="containerProdutos displayTrue3 displayNone">
+                    <div class="input-group">
+                        <select id="comprasCantina3" class="inputValor3 smallBox caixaProduto" required=""
+                            onchange="atualizouSelect3()" style="width: 200px;">
+                            <option value="produtoNaoSelecionado3">Produto</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="salgado3">Salgado</option>
+                            <option value="refrigerante3">Refrigerante</option>
+                            <option value="picole3">Picolé</option>
+                            <option value="chiclete3">Chiclete</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <select id="quantidadeCantina3" class="inputValor3 smallBox caixaQuantidade" required=""
+                            disabled onchange="atualizouSelect3()" style="width: 200px; padding-right: 16px;">
+                            <option value="quantidadeNaoSelecionada3">Quantidade</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off"
+                            class="inputValor3 caixaValor smallBox" disabled="">
+                        <label class="user-label " id="valor3">Valor</label>
+                    </div>
+                </div>
+
+                <div class="containerProdutos displayTrue4 displayNone">
+                    <div class="input-group">
+                        <select id="comprasCantina4" class="inputValor4 smallBox caixaProduto" required=""
+                            onchange="atualizouSelect4()" style="width: 200px;">
+                            <option value="produtoNaoSelecionado4">Produto</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="salgado4">Salgado</option>
+                            <option value="refrigerante4">Refrigerante</option>
+                            <option value="picole4">Picolé</option>
+                            <option value="chiclete4">Chiclete</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <select id="quantidadeCantina4" class="inputValor4 smallBox caixaQuantidade" required=""
+                            disabled onchange="atualizouSelect4()" style="width: 200px; padding-right: 16px;">
+                            <option value="quantidadeNaoSelecionada4">Quantidade</option>
+                            <!-- id="produtoNaoSelecionado" -->
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off"
+                            class="inputValor4 caixaValor smallBox" disabled="">
+                        <label class="user-label " id="valor4">Valor</label>
+                    </div>
+                </div>
+
+                <div class="containerFuncionario">
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off"
+                            class="input caixaNomeFuncionario">
+                        <label class="user-label">Nome do funcionário</label>
+                    </div>
+                    <div class="input-group">
+                        <input required="" type="text" name="text" autocomplete="off" class="input caixaDataRetirada">
+                        <label class="user-label">Data retirada</label>
+                    </div>
+                </div>
+                <button class="button1" onclick="window.print()">
+                    <span class="button_top"> Concluir
+                    </span>
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer class="containerfooter">
+        <nav class="box-1">
+            <p class="footertitle">Nome Consultoria</p>
+
+            <p class="footerwrite">@2022 Empresa</p>
+
+            <p class="footerwrite">Consultoria especializada atendimento ao consumidor.</p>
+
+            <p class="footerwrite">Todos os Direitos reservados.</p>
+        </nav>
+        <nav class="box-2">
+            <p class="footertitle">Contato</p>
+            <p class="footerwrite">+55 45 99555 5555</p>
+            <p class="footerwrite">+55 45 99555 5555</p>
+            <p class="footerwrite">Emdereço<br>
+                Emdereço<br>
+                Emdereço<br>
+            </p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.9918074225334!2d-53.74986033782348!3d-24.717254830766283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f395ecfef1a68b%3A0x51231ce02f6c8ccd!2sR.%20Cerro%20Cor%C3%A1%2C%20350%20-%20Vila%20Industrial%2C%20Toledo%20-%20PR%2C%2085904-300!5e0!3m2!1spt-BR!2sbr!4v1654606945855!5m2!1spt-BR!2sbr"
+                width="90%" height="37%" style="border:0; border-radius: 5px; opacity: 0.8;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </nav>
+        <nav class="box-3">
+            <p class="footertitle">Social</p>
+            <a href="" target="_blank">
+                <p class="footerwrite">
+                    <ion-icon name="logo-youtube"></ion-icon>Youtube
+                </p>
+            </a>
+            <a href="" target="_blank">
+                <p class="footerwrite">
+                    <ion-icon name="logo-instagram"></ion-icon>Instagram
+                </p>
+            </a>
+            <a href="" target="_blank">
+                <p class="footerwrite">
+                    <ion-icon name="logo-facebook"></ion-icon>Facebook
+                </p>
+            </a>
+            <a href="" target="_blank">
+                <p class="footerwrite">
+                    <ion-icon name="logo-linkedin"></ion-icon>Linkedin
+                </p>
+            </a>
+            <a href="" target="_blank">
+                <p class="footerwrite">
+                    <ion-icon name="logo-whatsapp"></ion-icon>Whatsapp
+                </p>
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
